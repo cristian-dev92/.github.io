@@ -5,33 +5,66 @@
     <title>Portfolio - Cristian Alhambra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <style> 
-      body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; background: #0f172a; color: #e5e7eb; } 
-      h1 { color: #38bdf8; }
-      a { color: #38bdf8; text-decoration: none; } 
-      .card { background: #020617; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 1rem; border: 1px solid #1f2937; } 
+      body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; } 
+      header { padding: 3rem 1rem; text-align: center; background: #111; color: white; } 
+      h1 { margin: 0; font-size: 2.5rem; } 
+      h2 { margin-top: 3rem; text-align: center; } 
+      section { max-width: 900px; margin: auto; padding: 1rem; } 
+      .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; } 
+      .card { background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); } 
+      .card img { width: 100%; border-radius: 10px; } 
+      .tech { font-size: 0.9rem; color: #666; margin-bottom: 0.5rem; } 
+      a { color: #0077ff; text-decoration: none; } 
+      footer { text-align: center; padding: 2rem; margin-top: 3rem; background: #111; color: white; }
     </style> 
   </head>
+  
   <body> 
-    <h1>Cristian Alhambra - Desarrollador Fullstack</h1>
-    <h2>Cargando portfolio...</h2>
-    <h2>Contacto</h2> 
-    <ul> 
-      <li>GitHub: <a href="https://github.com/cristian-dev92" target="_blank">github.com/cristian-dev92</a></li>
-      <li>Email: cristianalh@gmail.com</li> 
-    </ul>
     
-    <h2>Proyectos Destacados</h2> 
+    <header> 
+      <h1>Cristian Alhambra</h1> 
+      <p>Desarrollador Fullstack</p> 
+    </header> 
     
-    <div class="card"> 
-      <h3>Ecommerce Fullstack</h3> 
-      <p>Tienda online con autenticación JWT, carrito, checkout y panel de pedidos.</p> 
-      <ul> 
-        <li>Frontend: Angular 21 standalone</li> 
-        <li>Backend: Spring Boot 3, Spring Security, JWT</li> 
-      </ul> 
-      <p> Código backend: <a href="https://github.com/cristian-dev92/ecommerce-backend" target="_blank">Ver repositorio</a><br /> 
-          Código frontend: <a href="https://github.com/cristian-dev92/ecommerce-frontend" target="_blank">Ver repositorio</a> 
-      </p>
-    </div>
+    <section> 
+      <h2>Sobre mí</h2> 
+      <p> 
+        Soy técnico superior en desarrollo de aplicaciones web, actualmente me desempeño como desarrollador fullstack con experiencia práctica en Java, Spring Boot, Angular y base de datos. 
+        Enfocado en crear aplicaciones completas, funcionales y bien estructuradas.
+        Destaco por mi capacidad de aprendizaje rápido, constancia, trabajo en equipo y enfoque profesional en resolución de problemas.
+        Me apasiona este mundo porque es dinámico y ofrece la oportunidad de aprender algo nuevo cada día, es un desafío constante e impulsa mi crecimiento profesional.
+      </p> 
+    </section> 
+    
+    <section> 
+      <h2>Mis proyectos</h2> 
+      
+      <div class="projects"> 
+        
+        <!-- Proyecto Ecommerce --> 
+        <div class="card"> 
+          <img src="capturas/ecommerce.png" alt="Ecommerce"> 
+          <h3>Ecommerce Fullstack</h3> 
+          <p class="tech">Angular · Spring Boot · JWT · MySQL</p> 
+          <p>Tienda online completa con login, carrito, checkout y panel de pedidos.</p> 
+          <p> 
+            <a href="https://github.com/cristian-dev92/ecommerce-frontend" target="_blank">Frontend</a> · 
+            <a href="https://github.com/cristian-dev92/ecommerce-backend" target="_blank">Backend</a> 
+          </p> 
+        </div> 
+        
+        <!-- Aquí podrás añadir más proyectos --> 
+      </div> 
+    </section> 
+    
+    <footer> 
+      <p>Contacto</p> 
+      <p> 
+        <a href="https://www.linkedin.com/in/cristian-alhambra-tormos-8b4b91135" target="_blank">LinkedIn</a> · 
+        <a href="https://github.com/cristian-dev92" target="_blank">GitHub</a> · 
+        <a href="cristianalh@gmail.com">Email</a> 
+      </p> 
+    </footer> 
+    
   </body> 
 </html>
