@@ -14,8 +14,25 @@
       .card { background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); } 
       .card img { width: 100%; border-radius: 10px; } 
       .tech { font-size: 0.9rem; color: #666; margin-bottom: 0.5rem; } 
-      a { color: #0077ff; text-decoration: none; } 
+      a { color: #0077ff; text-decoration: none; }
       footer { text-align: center; padding: 2rem; margin-top: 3rem; background: #111; color: white; }
+       .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+       .gallery img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        transition: transform 0.2s;
+    }
+
+       .gallery img:hover {
+        transform: scale(1.05);
+    }
     </style> 
   </head>
   
@@ -23,7 +40,7 @@
     
     <header> 
       <h1>Cristian Alhambra</h1> 
-      <p>Desarrollador Fullstack</p> 
+      <h2>Desarrollador Fullstack</h2> 
     </header> 
     
     <section> 
@@ -39,18 +56,18 @@
     <section> 
       <h2>Mis proyectos</h2> 
       
-      <div class="projects"> 
+      <div class="card"> 
+        <h3>Ecommerce Fullstack</h3>
+        <p class="tech">Angular · Spring Boot · JWT · MySQL</p> 
+        <p>Tienda online completa con login, carrito, checkout y panel de pedidos.</p> 
         
         <!-- Proyecto Ecommerce --> 
-        <div class="card"> 
-          <img src="assets/PaginaPrincipal.png" alt="Ecommerce"> 
-          <img src="assets/Registro.png" alt="Ecommerce"> 
-          <img src="assets/InicioSesion.png" alt="Ecommerce"> 
-          <img src="assets/Carrito.png" alt="Ecommerce"> 
-          <img src="assets/MiPerfil.png" alt="Ecommerce"> 
-          <h3>Ecommerce Fullstack</h3> 
-          <p class="tech">Angular · Spring Boot · JWT · MySQL</p> 
-          <p>Tienda online completa con login, carrito, checkout y panel de pedidos.</p> 
+        <div class="gallery"> 
+          <img src="assets/capturas/PaginaPrincipal.png" alt="Página Principal"> 
+          <img src="assets/capturas/Registro.png" alt="Registro"> 
+          <img src="assets/capturas/InicioSesion.png" alt="Inicio Sesión"> 
+          <img src="assets/capturas/Carrito.png" alt="Carrito"> 
+          <img src="assets/capturas/MiPerfil.png" alt="Mi perfil"> 
           <p> 
             <a href="https://github.com/cristian-dev92/ecommerce-frontend" target="_blank">Frontend</a> · 
             <a href="https://github.com/cristian-dev92/ecommerce-backend" target="_blank">Backend</a> 
