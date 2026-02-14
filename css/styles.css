@@ -94,14 +94,18 @@ nav a:hover {
 
 /* ------------------ HEADER ------------------ */ 
 header {
-  height: 80vh; 
+  height: 45vh; 
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
   align-items: center; 
   text-align: center; 
-  padding: 2rem; 
+  padding: 1rem; 
+  margin-bottom: 0;
 } 
+
+ section { padding-top: 1rem; /* reduce espacio superior */ 
+         }
 
 /* Animación de escritura */ 
 .typing { 
@@ -112,27 +116,32 @@ header {
   white-space: nowrap; 
   overflow: hidden; 
   width: 0; 
-  animation: typing 2.5s steps(30) forwards, blink 0.7s infinite; 
+  animation: typing 2s steps(25) forwards 2s, blink 0.7s infinite; 
+  margin: 0;
+  padding: 0;
 }
 
 .typing2 { 
   font-size: 1.8rem; 
   margin-top: 1rem; 
-  color: var(--morado); 
-  border-right: 3px solid var(--morado); 
-  white-space: nowrap; overflow: hidden; 
+  color: var(--azul); 
+  border-right: 3px solid var(--azul); 
+  white-space: nowrap; 
+  overflow: hidden; 
   width: 0; 
-  animation: typing2 2.5s steps(30) forwards 2.6s, blink 0.7s infinite; 
+  animation: typing2 2s steps(25) forwards 2s, blink 0.7s infinite; 
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes typing { 
-  from { width: 0; }
-  to { width: 350px; } 
+  from { width: 0ch; }
+  to { width: 20ch; } 
 }
 
 @keyframes typing2 { 
-  from { width: 0; }
-  to { width: 300px; } 
+  from { width: 0ch; }
+  to { width: 18ch; } 
 }
 
 @keyframes blink {
@@ -211,24 +220,43 @@ section {
   background: rgba(0,0,0,0.8); 
   justify-content: center;
   align-items: center; 
-  z-index: 2000; 
+  z-index: 3000; 
 } 
 
 .modal img { 
-  width: 80%; 
-  max-width: 900px; 
+  width: 100%; 
+  max-width: 1200px; 
   border-radius: 10px;
 } 
 
 /* Botón X */ 
 .closeModal { 
   position: absolute; 
-  top: 30px; 
-  right: 40px; 
-  font-size: 35px; 
+  top: 25px; 
+  right: 35px; 
+  font-size: 40px; 
   color: white; 
   cursor: pointer; 
 } 
+
+.modalArrow {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  font-size: 45px; 
+  color: white; 
+  cursor: pointer; 
+  padding: 10px; 
+  user-select: none; 
+}
+
+.leftModal { left: 40px; } 
+.rightModal { right: 40px; } 
+
+.modalArrow:hover, 
+.closeModal:hover { 
+  color: var(--azul); 
+}
 
 /* ------------------ FLECHA ARRIBA ------------------ */ 
 #topBtn { 
@@ -253,9 +281,18 @@ footer {
   text-align: center; 
   padding: 2rem; 
   margin-top: 3rem; 
-  background: #111;
+  background: var(--morado);
 }
 
 .light-mode footer { 
   background: #d1d5db; 
+}
+
+footer a { 
+  color: var(--azul); 
+  font-weight: 600;
+}
+
+footer a:hover { 
+  color: var(--morado); 
 }
