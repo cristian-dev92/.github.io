@@ -116,7 +116,7 @@ header {
   white-space: nowrap; 
   overflow: hidden; 
   width: 0; 
-  animation: typing 1s steps(20) forwards 1s, blink 0.7s infinite; 
+  animation: typing 2s steps(20) forwards 2s, blink 0.7s infinite; 
   margin: 0;
   padding: 0;
 }
@@ -129,7 +129,7 @@ header {
   white-space: nowrap; 
   overflow: hidden; 
   width: 0; 
-  animation: typing2 1s steps(20) forwards 1s, blink 0.7s infinite; 
+  animation: typing2 2s steps(20) forwards 2s, blink 0.7s infinite; 
   margin: 0;
   padding: 0;
 }
@@ -141,16 +141,11 @@ header {
 
 @keyframes typing2 { 
   from { width: 0ch; }
-  to { width: 25ch; } 
+  to { width: 21ch; } 
 }
 
 @keyframes blink {
   50% { border-color: transparent; } 
-} 
-
-.subtitulo { 
-  color: var(--blanco); 
-  margin-top: 1rem; 
 } 
 
 /* ------------------ SECCIONES ------------------ */
@@ -277,13 +272,31 @@ section {
   background: var(--azul); 
 } 
 
+/* ------------------ FOOTER ------------------ */ 
 footer { 
-  text-align: center; 
+  text-align: center;
   padding: 2rem; 
   margin-top: 3rem; 
-  background: var(--morado);
+  background: #111; 
 }
 
+/* Modo claro */ 
 .light-mode footer { 
-  background: #d1d5db; 
+  background: #d1d5db;
+} 
+
+/* CONTACTO en morado */ 
+#contacto h2 { 
+  color: var(--morado); 
+}
+
+/* Enlaces SIEMPRE azules */ 
+footer a { 
+  color: var(--azul); 
+  font-weight: 600; 
+  text-decoration: 
+    none; 
+}
+footer a:hover { 
+  color: var(--morado); 
 }
