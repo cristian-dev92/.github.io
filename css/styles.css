@@ -1,0 +1,199 @@
+/* ------------------ PALETA MODO OSCURO ------------------ */ 
+:root { 
+  --azul: #3b82f6; 
+  --morado: #8b5cf6; 
+  --negro: #0f0f0f; 
+  --blanco: #ffffff; 
+} 
+
+/* ------------------ MODO CLARO ------------------ */ 
+.light-mode { 
+  --azul: #2563eb; 
+  --morado: #7c3aed; 
+  --negro: #f3f4f6; 
+  --blanco: #111827; 
+  background: var(--negro); 
+  color: var(--blanco); 
+} 
+
+/* Transiciones suaves */
+* { 
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ------------------ PALETA ------------------ */ 
+:root { 
+  --azul: #3b82f6; 
+  --morado: #8b5cf6; 
+  --negro: #0f0f0f; 
+  --blanco: #ffffff; 
+} 
+
+/* ------------------ ESTILOS GENERALES ------------------ */ 
+body { 
+  margin: 0; 
+  font-family: "Poppins", sans-serif; 
+  background: var(--negro); 
+  color: var(--blanco); 
+  scroll-behavior: smooth;
+} 
+
+/* ------------------ NAVBAR ------------------ */ nav {
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+  padding: 1rem 2rem; 
+  z-index: 1000; 
+} 
+
+nav a { 
+  margin-left: 1.5rem; 
+  color: var(--blanco); 
+  text-decoration: none; 
+  font-weight: 500; 
+  transition: 0.3s; 
+} 
+
+nav a:hover { 
+  color: var(--morado); 
+} 
+
+ /* Botón modo oscuro/claro */ 
+#themeToggle {
+  margin-left: 1.5rem;
+  background: transparent; 
+  border: 2px solid var(--blanco); 
+  color: var(--blanco); 
+  padding: 6px 10px; 
+  border-radius: 8px;
+  cursor: pointer; 
+  font-size: 1rem; 
+  transition: 0.3s; 
+} 
+
+#themeToggle:hover { 
+  background: var(--morado); 
+  border-color: var(--morado); 
+}
+
+/* ------------------ HEADER ------------------ */ 
+header {
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  padding: 2rem; 
+} 
+
+/* Animación de escritura */ 
+.typing { 
+  font-size: 3rem; 
+  font-weight: bold; 
+  color: var(--azul); 
+  border-right: 3px solid var(--azul); 
+  white-space: nowrap; 
+  overflow: hidden; 
+  width: 0; 
+  animation: typing 3s steps(30) forwards, blink 0.7s infinite; 
+}
+
+@keyframes typing { 
+  from { width: 0; }
+  to { width: 350px; } 
+}
+
+@keyframes blink {
+  50% { border-color: transparent; } 
+} 
+
+.subtitulo { 
+  color: var(--blanco); 
+  margin-top: 1rem; 
+} 
+
+h2 { 
+  color: var(--morado); 
+  margin-top: 3rem;
+  text-align: center; 
+} 
+
+section { 
+  max-width: 900px; 
+  margin: auto; 
+  padding: 2rem; 
+} 
+
+/* ------------------ PROYECTOS ------------------ */ 
+.card { 
+  background: #1a1a1a;
+  padding: 1.5rem; 
+  border-radius: 1rem; 
+  margin-bottom: 2rem; 
+  border: 1px solid #333; 
+} 
+
+.carousel { 
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 10px; 
+} 
+
+.carousel img { 
+  width: 100%; 
+  display: none; 
+  cursor: pointer; 
+  transition: transform 0.3s; 
+} 
+
+.carousel img.active { 
+  display: block; 
+} 
+
+.carousel img:hover {
+  transform: scale(1.05);
+} 
+
+/* ------------------ MODAL ------------------ */ 
+.modal { 
+  display: none; 
+  position: fixed;
+  inset: 0; 
+  background: rgba(0,0,0,0.8); 
+  justify-content: center;
+  align-items: center; 
+  z-index: 2000; 
+} 
+
+.modal img { 
+  width: 80%; 
+  max-width: 900px; 
+  border-radius: 10px;
+} 
+
+/* ------------------ FLECHA ARRIBA ------------------ */ 
+#topBtn { 
+  position: fixed;
+  bottom: 30px; 
+  right: 30px; 
+  background: var(--morado); 
+  color: white; 
+  padding: 12px 15px; 
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px; 
+  display: none; 
+  transition: 0.3s; 
+} 
+
+#topBtn:hover { 
+  background: var(--azul); 
+} 
+
+footer { 
+  text-align: center; 
+  padding: 2rem; 
+  margin-top: 3rem; 
+  background: #111;
+}
