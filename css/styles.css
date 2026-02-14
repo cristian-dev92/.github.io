@@ -136,12 +136,12 @@ header {
 
 @keyframes typing { 
   from { width: 0ch; }
-  to { width: 18ch; } 
+  to { width: 16ch; } 
 }
 
 @keyframes typing2 { 
   from { width: 0ch; }
-  to { width: 21ch; } 
+  to { width: 20ch; } 
 }
 
 @keyframes blink {
@@ -294,8 +294,7 @@ footer {
 footer a { 
   color: var(--azul); 
   font-weight: 600; 
-  text-decoration: 
-    none; 
+  text-decoration: none; 
 }
 footer a:hover { 
   color: var(--morado); 
