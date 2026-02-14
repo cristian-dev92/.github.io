@@ -94,7 +94,7 @@ nav a:hover {
 
 /* ------------------ HEADER ------------------ */ 
 header {
-  height: 40vh; 
+  height: 35vh; 
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
@@ -179,12 +179,16 @@ section {
   position: relative; 
   overflow: hidden; 
   border-radius: 10px; 
+  height: 500px;
 } 
 
 .carousel img { 
   width: 100%; 
   display: none; 
   cursor: pointer; 
+  object-fit: cover;
+  display: none; 
+  cursor: pointer;
 } 
 
 .carousel img.active { 
@@ -220,7 +224,9 @@ section {
 
 .modal img { 
   width: 100%; 
-  max-width: 1200px; 
+  max-width: 1500px; 
+  max-height: 90vh;
+  object-fit: contain;
   border-radius: 10px;
 } 
 
@@ -298,4 +304,14 @@ footer a {
 }
 footer a:hover { 
   color: var(--morado); 
+}
+
+.card a { 
+  color: var(--azul); 
+  font-weight: 600; 
+  text-decoration: none; 
+} 
+
+.card a:hover { 
+  color: var(--morado);
 }
