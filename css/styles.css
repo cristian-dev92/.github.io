@@ -136,7 +136,7 @@ header {
 
 @keyframes typing { 
   from { width: 0ch; }
-  to { width: 15ch; } 
+  to { width: 15.5ch; } 
 }
 
 @keyframes typing2 { 
