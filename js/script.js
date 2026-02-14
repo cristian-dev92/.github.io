@@ -1,3 +1,64 @@
+/* ----------- IDIOMAS (ES / EN) ----------- */ 
+const langBtn = document.getElementById("langToggle"); 
+let currentLang = localStorage.getItem("lang") || "es"; 
+
+const translations = { 
+  es: { 
+    menuAbout: "Sobre mí", 
+    menuProjects: "Proyectos", 
+    menuContact: "Contacto", 
+    
+    headerName: "Cristian Alhambra", 
+    headerRole: "Desarrollador Fullstack",
+    
+    aboutTitle: "Sobre mí",
+    aboutText: `Soy técnico superior en desarrollo de aplicaciones web, actualmente me desempeño como desarrollador fullstack con experiencia práctica en Java, Spring Boot, Angular y base de datos. Me enfoco en crear aplicaciones completas, funcionales y bien estructuradas. Cada proyecto supone un reto que impulsa mi crecimiento personal y profesional. Destaco por mi capacidad de aprendizaje rápido, constancia, trabajo en equipo y enfoque profesional en resolución de problemas.`, 
+    
+    projectsTitle: "Mis proyectos", 
+    ecommerceTitle: "Ecommerce Fullstack",
+    ecommerceDesc: `Este proyecto es una plataforma ecommerce fullstack construida con Angular y Spring Boot. Implementa un sistema de autenticación seguro mediante JWT, gestión de usuarios, catálogo dinámico de productos, carrito persistente y proceso de compra completo. Además, cuenta con un panel de administración que permite realizar un CRUD completo (crear, leer, actualizar y eliminar) de productos, categorías y pedidos, garantizando una gestión integral del negocio.`, 
+    
+    closeModal: "✖",
+    contactTitle: "Contacto" 
+  }, 
+  
+  en: { 
+    menuAbout: "About me",
+    menuProjects: "Projects",
+    menuContact: "Contact",
+       
+    headerName: "Cristian Alhambra",
+    headerRole: "Fullstack Developer", 
+       
+    aboutTitle: "About me",
+    aboutText: `I am a certified web application developer and currently work as a full-stack developer with hands-on experience in Java, Spring Boot, Angular, and databases. I focus on creating complete, functional, and well-structured applications. Each project presents a challenge that fosters my personal and professional growth. I excel at rapid learning, perseverance, teamwork, and a professional approach to problem-solving.`, 
+       
+    projectsTitle: "My projects",
+    ecommerceTitle: "Fullstack Ecommerce",
+    ecommerceDesc: `This project is a full-stack ecommerce platform built with Angular and Spring Boot. It implements a secure authentication system using JWT, user management, a dynamic product catalog, a persistent shopping cart, and a complete checkout process. Furthermore, it features an administration panel that allows for full CRUD (create, read, update, and delete) functionality for products, categories, and orders, ensuring comprehensive business management.`,
+    
+    closeModal: "✖", 
+    contactTitle: "Contact" 
+  } 
+}; 
+
+function applyTranslations() { 
+  document.querySelectorAll("[data-key]").forEach(el => { 
+    const key = el.getAttribute("data-key"); 
+    el.textContent = translations[currentLang][key];
+  }); 
+} 
+
+langBtn.addEventListener("click", () => { 
+  currentLang = currentLang === "es" ? "en" : "es"; 
+  langBtn.textContent = currentLang === "es" ? "EN" : "ES"; 
+  localStorage.setItem("lang", currentLang);
+  applyTranslations(); 
+}); 
+
+// Cargar idioma guardado 
+applyTranslations();
+
 /* ----------- MODO OSCURO / CLARO ----------- */ 
 const themeBtn = document.getElementById("themeToggle"); 
 
@@ -49,19 +110,44 @@ function initCarousel(id) {
     showImage(index);
   }, 3000); 
 
-  // Zoom modal
-  images.forEach(img => {
-    img.addEventListener("click", () => {
-      document.getElementById("modalImg").src = img.src; 
-      document.getElementById("modal").style.display = "flex"; 
-    });
-  });
-
+   // Abrir modal al hacer clic 
+  images.forEach((img, i) => { 
+    img.addEventListener("click", () => { 
+      openModal(images, i); 
+    }); 
+  }); 
 }
 
 initCarousel("carousel1"); 
 
-/* ----------- MODAL ----------- */ 
+/* MODAL CON ZOOM + FLECHAS */ 
+
+let modalIndex = 0; 
+let modalImages = [];
+
+function openModal(images, index) { 
+  modalImages = images; 
+  modalIndex = index; 
+  
+  document.getElementById("modalImg").src = modalImages[modalIndex].src; 
+  document.getElementById("modal").style.display = "flex"; 
+} 
+
+document.querySelector(".closeModal").addEventListener("click", () => { 
+  document.getElementById("modal").style.display = "none";
+}); 
+
+document.querySelector(".leftModal").addEventListener("click", () => { 
+  modalIndex = (modalIndex - 1 + modalImages.length) % modalImages.length; 
+  document.getElementById("modalImg").src = modalImages[modalIndex].src; 
+});
+
+document.querySelector(".rightModal").addEventListener("click", () => {
+  modalIndex = (modalIndex + 1) % modalImages.length;
+  document.getElementById("modalImg").src = modalImages[modalIndex].src;
+}); 
+
+// Cerrar modal haciendo clic fuera
 document.getElementById("modal").addEventListener("click", (e) => {
   if (e.target.classList.contains("closeModal") || e.target.id === "modal") {
     document.getElementById("modal").style.display = "none"; 
