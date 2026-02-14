@@ -13,25 +13,28 @@
     
     <!-- NAV --> 
     <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a> 
+      <a href="#sobre-mi" data-key="menuAbout">Sobre mí</a>
+      <a href="#proyectos" data-key="menuProjects">Proyectos</a>
+      <a href="#contacto" data-key="menuContact">Contacto</a> 
     </nav> 
 
     <!-- Botón modo oscuro/claro -->
-    <button id="themeToggle">🌙</button>
+    <button id="themeToggle" id="themeToggle">🌙</button>
   </nav>
+    
+    <!-- Botón idiomas -->
+    <button id="langToggle" id="langToggle">EN</button>
     
     <!-- HEADER --> 
     <header>
-      <div class="typing">¡Hola! Soy Cristian Alhambra</div> 
-      <h3 class="subtitulo">Desarrollador Fullstack</h3> 
+      <div class="typing" data-key="headerName">¡Hola! Soy Cristian Alhambra</div> 
+      <h3 class="typing2" data-key="headerRole">Desarrollador Fullstack</h3> 
     </header> 
     
     <!-- SOBRE MI --> 
     <section id="sobre-mi"> 
-      <h2>Sobre mí</h2>
-      <p> 
+      <h2 data-key="aboutTitle">Sobre mí</h2>
+      <p data-key="aboutText"> 
         Soy técnico superior en desarrollo de aplicaciones web, actualmente me desempeño como desarrollador fullstack con experiencia práctica en Java, Spring Boot, Angular y base de datos.<br><p>
         Me enfoco en crear aplicaciones completas, funcionales y bien estructuradas.<br><p> 
         Cada proyecto supone un reto que impulsa mi crecimiento personal y profesional.<br><p> 
@@ -41,13 +44,21 @@
     
     <!-- PROYECTOS --> 
     <section id="proyectos"> 
-      <h2>Mis proyectos</h2>
+      <h2 data-key="projectsTitle">Mis proyectos</h2>
       <div class="card"> 
         
-        <h3>Ecommerce Fullstack</h3> 
-        <p>Angular · Spring Boot · JWT · MySQL</p> 
-        
+        <h3 data-key="ecommerceTitle">Ecommerce Fullstack</h3> 
+        <p class="tech"> Angular · Spring Boot · JWT · MySQL</p> 
+
+         <p class="descripcion" data-key="ecommerceDesc">
+        Este proyecto es una plataforma ecommerce fullstack construida con Angular y Spring Boot.<br><p>
+        Implementa un sistema de autenticación seguro mediante JWT, gestión de usuarios, catálogo dinámico de productos, carrito persistente y proceso de compra completo.<br><p>
+        Además, cuenta con un panel de administración que permite realizar un CRUD completo (crear, leer, actualizar y eliminar) de productos, categorías y pedidos, garantizando una gestión integral del negocio.
+          
         <div class="carousel" id="carousel1"> 
+          <span class="arrow left">❮</span> 
+          <span class="arrow right">❯</span>
+          
           <img src="assets/capturas/PaginaPrincipal.png" class="active"> 
           <img src="assets/capturas/Registro.png"> 
           <img src="assets/capturas/InicioSesion.png"> 
@@ -63,7 +74,7 @@
     </section> 
     
     <!-- CONTACTO --> 
-    <footer id="contacto"> <h3>Contacto</h3> 
+    <footer id="contacto" data-key="contactTitle"> <h3>Contacto</h3> 
       <p> 
         <a href="https://www.linkedin.com/in/cristian-alhambra-tormos-8b4b91135" target="_blank">LinkedIn</a> · 
         <a href="https://github.com/cristian-dev92" target="_blank">GitHub</a> · 
@@ -72,7 +83,9 @@
     </footer> 
     
     <!-- MODAL --> 
-    <div class="modal" id="modal"> <img id="modalImg"> 
+    <div class="modal" id="modal"> 
+      <span class="closeModal" data-key="closeModal">✖</span>
+      <img id="modalImg"> 
     </div> 
     
     <!-- FLECHA ARRIBA --> 
