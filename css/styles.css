@@ -116,7 +116,7 @@ header {
   white-space: nowrap; 
   overflow: hidden; 
   width: 0; 
-  animation: typing 2s steps(25) forwards 2s, blink 0.7s infinite; 
+  animation: typing 1s steps(20) forwards 1s, blink 0.7s infinite; 
   margin: 0;
   padding: 0;
 }
@@ -129,19 +129,19 @@ header {
   white-space: nowrap; 
   overflow: hidden; 
   width: 0; 
-  animation: typing2 1s steps(25) forwards 1s, blink 0.7s infinite; 
+  animation: typing2 1s steps(20) forwards 1s, blink 0.7s infinite; 
   margin: 0;
   padding: 0;
 }
 
 @keyframes typing { 
   from { width: 0ch; }
-  to { width: 20ch; } 
+  to { width: 18ch; } 
 }
 
 @keyframes typing2 { 
   from { width: 0ch; }
-  to { width: 20ch; } 
+  to { width: 25ch; } 
 }
 
 @keyframes blink {
@@ -286,9 +286,4 @@ footer {
 
 .light-mode footer { 
   background: #d1d5db; 
-}
-
-footer a { 
-  color: var(--azul); 
-  font-weight: 600;
 }
