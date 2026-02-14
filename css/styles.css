@@ -94,7 +94,7 @@ nav a:hover {
 
 /* ------------------ HEADER ------------------ */ 
 header {
-  height: 45vh; 
+  height: 40vh; 
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
@@ -129,7 +129,7 @@ header {
   white-space: nowrap; 
   overflow: hidden; 
   width: 0; 
-  animation: typing2 2s steps(25) forwards 2s, blink 0.7s infinite; 
+  animation: typing2 1s steps(25) forwards 1s, blink 0.7s infinite; 
   margin: 0;
   padding: 0;
 }
@@ -141,7 +141,7 @@ header {
 
 @keyframes typing2 { 
   from { width: 0ch; }
-  to { width: 18ch; } 
+  to { width: 20ch; } 
 }
 
 @keyframes blink {
@@ -291,8 +291,4 @@ footer {
 footer a { 
   color: var(--azul); 
   font-weight: 600;
-}
-
-footer a:hover { 
-  color: var(--morado); 
 }
