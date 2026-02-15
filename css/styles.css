@@ -144,8 +144,9 @@ header {
   border-right: 3px solid var(--azul); 
   white-space: nowrap; 
   overflow: hidden; 
-  width: 0; 
-  animation: typing 2s steps(14) forwards 2s, blink 0.7s infinite; 
+  width: 16ch; 
+  max-width: 16ch;
+  animation: typing 2s steps(16) forwards 2s, blink 0.7s infinite; 
   margin: 0;
   padding: 0;
 }
@@ -157,7 +158,8 @@ header {
   border-right: 3px solid var(--azul); 
   white-space: nowrap; 
   overflow: hidden; 
-  width: 0; 
+  width: 20ch; 
+  max-width: 20ch;
   animation: typing2 2s steps(20) forwards 2s, blink 0.7s infinite; 
   margin: 0;
   padding: 0;
@@ -372,5 +374,6 @@ footer a:hover {
   /* Evitar que el header suba debajo del nav */
   header { 
     margin-top: 55px; 
-  }
+    width: 100%; 
+    overflow: hidden;
 }
