@@ -45,7 +45,7 @@ nav {
   left: 0;
   width: 100%;
   right: 0; 
-  padding: 0.4rem 0.6rem; 
+  padding: 0.4rem 0.5rem; 
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
@@ -70,8 +70,8 @@ nav {
 
 .nav-buttons button {
   margin-left: 0;
-  padding: 5px 8px; 
-  font-size: 0.9rem; 
+  padding: 5px 7px; 
+  font-size: 0.7rem; 
   border: 2px solid var(--blanco);
   background: transparent; 
   color: var(--blanco); 
@@ -145,7 +145,7 @@ header {
   white-space: nowrap; 
   overflow: hidden; 
   width: 0; 
-  animation: typing 2s steps(15) forwards 2s, blink 0.7s infinite; 
+  animation: typing 2s steps(14) forwards 2s, blink 0.7s infinite; 
   margin: 0;
   padding: 0;
 }
@@ -353,7 +353,7 @@ footer a:hover {
   } 
   
    .nav-links a { 
-     font-size: 0.7rem; 
+     font-size: 0.6rem; 
      margin-left: 0.3rem;
    }
   
@@ -364,8 +364,8 @@ footer a:hover {
   }
   
   .nav-buttons button { 
-    padding: 4px 6px; 
-    font-size: 0.8rem; 
+    padding: 4px 5px; 
+    font-size: 0.6rem; 
     margin-left: 0.4rem;
   } 
   
