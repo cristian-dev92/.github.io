@@ -129,7 +129,7 @@ header {
   overflow: hidden; 
   width: 16ch; 
   max-width: 16ch;
-  animation: typing 2s steps(16) forwards 2s, blink 0.7s infinite; 
+  animation: typing 2s steps(28) forwards 2s, blink 0.7s infinite; 
   margin: 0;
   padding: 0;
 }
@@ -150,7 +150,7 @@ header {
 
 @keyframes typing { 
   from { width: 0ch; }
-  to { width: 16ch; } 
+  to { width: 28ch; } 
 }
 
 @keyframes typing2 { 
