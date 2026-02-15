@@ -345,7 +345,7 @@ footer a:hover {
 
   /* ------------------ HABILIDADES ------------------ */ 
   #habilidades { 
-    max-width: 700px; 
+    max-width: 900px; 
     margin: 3rem auto; 
     padding: 2rem; 
     text-align: center; 
@@ -353,20 +353,33 @@ footer a:hover {
   
   .skills-list { 
     display: flex; 
-    flex-direction: column;
-    gap: 0.8rem; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; 
     margin-top: 2rem; 
   } 
   
   .skill-text {
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     font-weight: 600;
     color: var(--blanco);
-    text-align: center; 
+    background: #1a1a1a; /* Fondo oscuro para que resalte */
+    padding: 10px 20px;
+    border-radius: 50px; /* Forma de pastilla */
+    border: 1px solid var(--azul); /* Un toque de color */
+    transition: 0.3s;
   } 
-  
+
+  .skill-text:hover {
+    background: var(--azul);
+    transform: translateY(-3px); /* Efecto hover elegante */
+  }
+
   .light-mode .skill-text { 
+    background: #e5e7eb;
     color: #111; 
+    border-color: var(--morado); 
   }
  
 
@@ -441,6 +454,15 @@ footer a:hover {
 
  /* ------------------ NAV RESPONSIVE ------------------ */ 
  @media (max-width: 768px) { 
+
+  .skills-list {
+    gap: 0.6rem; /* Reducimos el espacio en móvil */
+  }
+   
+  .skill-text {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
   
   /* Evitar que el header suba debajo del nav */
   header { 
