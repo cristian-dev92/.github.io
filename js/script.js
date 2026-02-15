@@ -6,7 +6,7 @@ const translations = {
   es: { 
     menuAbout: "Sobre mí", 
     menuProjects: "Proyectos",
-    menuskillsTitle: "Mis habilidades",
+    menuskills: "Mis habilidades",
     menuContact: "Contacto", 
     contactMessage: "Escribe tu mensaje...",
     sendMessage: "Enviar mensaje",
@@ -33,7 +33,7 @@ const translations = {
   en: { 
     menuAbout: "About me",
     menuProjects: "Projects",
-    menuskillsTitle: "My Skills",
+    menuskills: "My Skills",
     menuContact: "Contact",
     contactMessage: "Write your message...",
     sendMessage: "Send message",
