@@ -413,10 +413,17 @@ footer a:hover {
   
   .skill-item { 
     background: #1a1a1a; 
-    padding: 1.5rem; 
-    border-radius: 16px; 
+    padding: 1.2rem; 
+    border-radius: 12px; 
     border: 1px solid #333;
     transition: 0.3s ease; 
+    text-align: center;
+  }
+
+  .skill-item:hover { 
+    transform: translateY(-8px); 
+    border-color: var(--morado); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
   
   .light-mode .skill-item { 
@@ -430,9 +437,9 @@ footer a:hover {
   }
   
   .skill-item img { 
-    width: 60px; 
-    height: 60px;
-    margin-bottom: 0.8rem; 
+    width: 60px !important; 
+    height: 60px !important; 
+    margin-bottom: 0.6rem; 
   } 
   
   .skill-item p { 
@@ -494,6 +501,10 @@ footer a:hover {
     flex-direction: column; 
     gap: 1rem;
     margin-top: 2rem;
+    background: #111; 
+    padding: 2rem;
+    border-radius: 12px; 
+    border: 1px solid #333;
   } 
   
   .contact-form input, 
