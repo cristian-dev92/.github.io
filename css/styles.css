@@ -455,17 +455,6 @@ footer a:hover {
     padding: 0.3rem 0.5rem; 
   } 
   
-   .nav-links a { 
-     font-size: 1rem; 
-     margin-left: 0.5rem;
-   }
-  
-  /* Contenedor para los botones */ 
-
-  .nav-buttons { 
-    gap: 0.2rem; 
-  }
-  
   .nav-buttons button { 
     padding: 3px 6px; 
     font-size: 0.8rem; 
