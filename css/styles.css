@@ -21,14 +21,6 @@
   transition: background 0.3s, color 0.3s;
 }
 
-/* ------------------ PALETA ------------------ */ 
-:root { 
-  --azul: #3b82f6; 
-  --morado: #8b5cf6; 
-  --negro: #0f0f0f; 
-  --blanco: #ffffff; 
-} 
-
 /* ------------------ ESTILOS GENERALES ------------------ */ 
 body { 
   margin: 0; 
@@ -449,18 +441,6 @@ footer a:hover {
 
  /* ------------------ NAV RESPONSIVE ------------------ */ 
  @media (max-width: 768px) { 
-  
-  nav { 
-    gap: 1.2rem;
-    padding: 0.3rem 0.5rem; 
-  } 
-  
-  .nav-buttons button { 
-    padding: 3px 6px; 
-    font-size: 0.8rem; 
-    margin-left: 0.4rem;
-    border-width: 1px;
-  } 
   
   /* Evitar que el header suba debajo del nav */
   header { 
