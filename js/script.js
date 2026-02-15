@@ -8,6 +8,7 @@ const translations = {
     menuProjects: "Proyectos",
     menuskillsTitle: "Mis habilidades",
     menuContact: "Contacto", 
+    contactMessage: "Escribe tu mensaje...",
     sendMessage: "Enviar mensaje",
     
     headerName: "¡Hola! Soy Cristian Alhambra", 
@@ -34,6 +35,7 @@ const translations = {
     menuProjects: "Projects",
     menuskillsTitle: "My Skills",
     menuContact: "Contact",
+    contactMessage: "Write your message...",
     sendMessage: "Send message",
        
     headerName: "Cristian Alhambra",
