@@ -71,11 +71,11 @@ const translations = {
 function applyTranslations() { 
   document.querySelectorAll("[data-key]").forEach(el => { 
     const key = el.getAttribute("data-key"); 
-    el.innerHTML = translations[currentLang][key];
     const translation = translations[currentLang][key];
 
     if (!translation) return; // evita undefined 
-    
+
+    // Si el elemento tiene placeholder, traducir placeholder
     if (el.placeholder !== undefined) { 
       el.placeholder = translation; 
     } 
