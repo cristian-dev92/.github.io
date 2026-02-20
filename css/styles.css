@@ -1,4 +1,4 @@
-//* ------------------ PALETA MODO OSCURO ------------------ *// 
+/* ------------------ PALETA MODO OSCURO ------------------ */
 :root { 
   --azul: #3b82f6; 
   --morado: #8b5cf6;
@@ -202,7 +202,7 @@ section {
 #proyectos, 
 #habilidades, 
 #contacto { 
-  padding-top: 200px; 
+  padding-top: 210px; 
 }
 
 /* ------------------ PROYECTOS ------------------ */ 
